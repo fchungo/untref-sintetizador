@@ -58,6 +58,10 @@ int faust::Vco::GetOutputRate(int channel)
 
 void faust::Vco::ClassInit(int samplingFreq)
 {
+/*
+comentario
+*/
+
     mydspSIG0* sig0 = newmydspSIG0();
     sig0->instanceInitmydspSIG0(samplingFreq);
     sig0->fillmydspSIG0(65536, ftbl0mydspSIG0);
@@ -67,6 +71,7 @@ void faust::Vco::ClassInit(int samplingFreq)
 void faust::Vco::InstanceConstants(int samplingFreq)
 {
     fSamplingFreq = samplingFreq;
+    // comparacion: min se queda con el minimo entre dos numeros y max con el máximo
     fConst0 = std::min<float>(192000.0f, std::max<float>(1.0f, float(fSamplingFreq)));
     fConst1 = (1.0f / fConst0);
     fConst2 = (0.00520833349f * mydsp_faustpower3_f(fConst0));
