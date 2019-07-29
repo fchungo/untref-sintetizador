@@ -16,7 +16,7 @@ public class ConfigFactory {
     static {
         engines = new LinkedHashMap<>();
         engines.put("PureData", "com.untref.synth3f.domain_layer.helpers.PureDataConfig");
-        engines.put("Faust", "com.untref.synth3f.domain_layer.helpers.FaustConfig");
+        //engines.put("Faust", "com.untref.synth3f.domain_layer.helpers.FaustConfig");
         enginesIterator = generateIterator();
         currentEntry = enginesIterator.next();
 

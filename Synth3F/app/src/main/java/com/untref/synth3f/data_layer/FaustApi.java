@@ -3,6 +3,7 @@ package com.untref.synth3f.data_layer;
 public class FaustApi {
 
     static {
+        //System.loadLibrary("c++_shared");
         System.loadLibrary("c++_shared");
         System.loadLibrary("faust_api");
     }
